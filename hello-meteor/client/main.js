@@ -33,8 +33,8 @@ Meteor.startup(function () {
 	let name = 'Mike'
 	let jsx = (
 		<div>
-		<h1>{title}</h1>
-	    
+		 <h1>{title}</h1>
+		 <p>Hello {name}!</p>
 	     {renderPlayers(players)}
 	   </div>
 	 );
