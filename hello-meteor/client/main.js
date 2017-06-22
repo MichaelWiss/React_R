@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 
 Meteor.startup(function () {
-	let jsx = <p>This is from main.js</p>;
+	let name = 'Michael';
+	let jsx = <p>Hello {name}!</p>;
 	ReactDOM.render(jsx, document.getElementById('app'));
 });
