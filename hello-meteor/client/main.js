@@ -1,6 +1,6 @@
-import someDefault, {greetUser, name} from './../imports/utils';
-import {add} from './../imports/math';
+import alphaDefault from './../imports/utils';
+
 
 console.log('Log from /client/main.js');
-console.log(greetUser());
-console.log(someDefault);
+
+console.log(alphaDefault);
