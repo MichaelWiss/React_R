@@ -8,7 +8,7 @@ const players = [{
 	score: 99
 }, {
 	_id: '2',
-	name: 'Cory'
+	name: 'Cory',
 	score: -1
 }, {
 	_id: '3',
@@ -21,9 +21,10 @@ Meteor.startup(function () {
 	let name = 'Michael';
 	let jsx = (
 		<div>
-		<h1> {title} </h1>
+		<h1>{title}</h1>
 	     <p>Hello {name}!</p>
 	     <p>This is my second P.</p>
+	     {[<p>1</p>, <p>2</p>]}
 	   </div>
 	 );
 	ReactDOM.render(jsx, document.getElementById('app'));
