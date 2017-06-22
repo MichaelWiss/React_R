@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 
+
+
 const players = [{
 	_id: '1',
 	name: 'Lauren',
@@ -17,23 +19,23 @@ const players = [{
 }];
 
 const renderPlayers = function (playersList) {
-  let numbers = [{val:9}, {val:2}, {val:3}];
-
-  return newNumbers= numbers.map(function (number) {
-  	return <p key={number.val}>{number.val}</p>;
-
-  });
+  return playersList.map(function (player) {
+  	return <p key={player._id}>{player.name} has {player.score} points</p>;
+   });
 };
 
+
+
+
+
 Meteor.startup(function () {
-	let title = 'Account Settings';
-	let name = 'Michael';
+	let title = 'Score Keep';
+	let name = 'Mike'
 	let jsx = (
 		<div>
 		<h1>{title}</h1>
-	     <p>Hello {name}!</p>
-	     <p>This is my second P.</p>
-	     {renderPlayers()}
+	    
+	     {renderPlayers(players)}
 	   </div>
 	 );
 	ReactDOM.render(jsx, document.getElementById('app'));
