@@ -17,15 +17,12 @@ const players = [{
 }];
 
 const renderPlayers = function (playersList) {
-  let numbers = [{val:1}, {val:2}, {val:3}];
+  let numbers = [{val:9}, {val:2}, {val:3}];
 
-  let newNumbers= numbers.map(function (number) {
-  	return number.val - 1;
+  return newNumbers= numbers.map(function (number) {
+  	return <p key={number.val}>{number.val}</p>;
 
   });
-  console.log(newNumbers);
-
-  return [<p key="1">1</p>, <p key="2">2</p>, <p key="3">3</p>];
 };
 
 Meteor.startup(function () {
