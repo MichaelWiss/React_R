@@ -33,7 +33,6 @@ Meteor.startup(function () {
     	name: 'Sarah',
     	score: 100
     });
-    console.log(Players.find().fetch());
 });
 
 
