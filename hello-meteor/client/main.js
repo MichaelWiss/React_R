@@ -5,11 +5,9 @@ import {Tracker} from 'meteor/tracker';
 
 import {Players} from './../imports/api/players';
 
-
-setTimeout(function () {
-console.log('Players list', Players.find().fetch());
-}, 1000);
-
+Tracker.autorun(function () {
+  console.log('Players list', Players.find().fetch());
+});
 
 const players = [{
 	_id: '1',
