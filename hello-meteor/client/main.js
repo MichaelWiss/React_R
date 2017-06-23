@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
+import {Tracker} from 'meteor/tracker';
 
+import {Players} from './../imports/api/players';
+
+
+setTimeout(function () {
+console.log('Players list', Players.find().fetch());
+}, 1000);
 
 
 const players = [{
