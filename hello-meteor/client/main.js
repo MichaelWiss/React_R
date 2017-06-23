@@ -27,6 +27,13 @@ Meteor.startup(function () {
 	 );
 	ReactDOM.render(jsx, document.getElementById('app'));
   });
+  //insert new doc
+  Players.insert(
+    {
+    	name: 'Sarah',
+    	score: 100
+    });
+    console.log(Players.find().fetch());
 });
 
 
