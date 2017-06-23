@@ -17,8 +17,8 @@ Meteor.startup(function () {
    Tracker.autorun(function () {
 	  let players = Players.find().fetch();
 	  let title = 'Score Keep';
-	let name = 'Mike'
-	let jsx = (
+	  let name = 'Mike'
+	  let jsx = (
 		<div>
 		 <h1>{title}</h1>
 		 <p>Hello {name}!</p>
