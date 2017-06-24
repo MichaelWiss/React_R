@@ -8,13 +8,23 @@ import {Players} from './../imports/api/players';
 
 const renderPlayers = function (playersList) {
   return playersList.map(function (player) {
-  	return <p key={player._id}>{player.name} has {player.score} point(s).</p>
+  	return <p key={player._id}>{player.name} has {player.score} point(s).</p>;
    });
  };
 
-const handleSubmit = function (event) {
+const handleSubmit = function (e) {
    let playerName = e.target.playerName.value;
+
    e.preventDefault();
+
+   if (playerName) {
+   	 e.target.playerName.value = '';
+   	 Players.insert(
+    {
+    	name: playerName,
+    	score: 0
+    });
+  }
 }; 
 
 Meteor.startup(function () {
@@ -36,11 +46,7 @@ Meteor.startup(function () {
 	ReactDOM.render(jsx, document.getElementById('app'));
   });
   //insert new doc
-  Players.insert(
-    {
-    	name: 'Sarah',
-    	score: 100
-    });
+  
 });
 
 
