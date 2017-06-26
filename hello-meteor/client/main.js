@@ -11,7 +11,9 @@ const renderPlayers = (playersList) => {
   	return (
   		<p key={player._id}>
   		   {player.name} has {player.score} point(s).
-  		   <button>x</button>
+  		   <button onClick={() => {
+  		   	alert('deleted')
+  		   }}>x</button>
   	    </p>
      );
    });
