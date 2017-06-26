@@ -28,7 +28,7 @@ const handleSubmit = (e) => {
 }; 
 
 Meteor.startup(() => {
-   Tracker.autorun(function () {
+   Tracker.autorun(() => {
 	  let players = Players.find().fetch();
 	  let title = 'Score Keep';
 	  let name = 'Mike'
