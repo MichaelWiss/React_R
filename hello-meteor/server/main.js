@@ -11,6 +11,9 @@ Meteor.startup(() => {
      	// return 'Hi! I am ' + this.name + '.';
      	return `Hi I am ${this.name}.`;
      }
+     getPersonDescription() {
+     	return `${this.name} is ${this.age} years old.`;
+     }
    }
 
 
@@ -18,4 +21,5 @@ Meteor.startup(() => {
    console.log(me.getGreeting());
    let him = new Person('Andrew', 25);
    console.log(him.getGreeting());
+   console.log(him.getPersonDescription());
 });
