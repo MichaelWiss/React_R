@@ -16,6 +16,13 @@ Meteor.startup(() => {
      }
    }
 
+   class Employee extends Person {
+   	 constructor(name, age, title) {
+   	 	super(name, age);
+   	 	this.title = title;
+   	 }
+   }
+
 
   let me = new Person('Michael');
    console.log(me.getGreeting());
