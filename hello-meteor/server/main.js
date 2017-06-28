@@ -25,7 +25,7 @@ Meteor.startup(() => {
    	 	if (this.title) {
         return `Hi I am ${this.name}. I work as a ${this.title}`;
    	 	} else {
-         retun super.getGreeting();
+         return super.getGreeting();
    	 	}
    	 }
     hasJob() {
@@ -34,17 +34,22 @@ Meteor.startup(() => {
   }
 
   class Programmer extends Person {
-  	constructor(name, age, preferredLanguage) {
+  	constructor(name, age, preferredLanguage = 'assembly') {
   		super(name, age);
   		this.preferredLanguage = preferredLanguage;
   	}
-  	
-  }
+  	getGreeting() {
+  		return `Hi I am ${this.name}. I am ${this.age}. My preferred language is ${this.preferredLanguage}`;
+
+  	}
+ }
 
   let me = new Employee('Michael', 26, 'db admin');
    console.log(me.getGreeting());
    
   let him = new Employee('Andrew', 25);
    console.log(him.hasJob());
+  let userOne = new Programmer('Michael', 26, 'Javascript');
+  console.log(userOne.getGreeting());
 
 });
