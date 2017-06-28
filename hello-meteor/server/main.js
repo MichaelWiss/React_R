@@ -21,6 +21,13 @@ Meteor.startup(() => {
    	 	super(name, age);
    	 	this.title = title;
    	 }
+   	 getGreeting() {
+   	 	if (this.title) {
+        return `Hi I am ${this.name}. I work as a ${this.title}`;
+   	 	} else {
+         retun super.getGreeting();
+   	 	}
+   	 }
     hasJob() {
       return !!this.title;
     }
