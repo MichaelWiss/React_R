@@ -21,12 +21,18 @@ Meteor.startup(() => {
    	 	super(name, age);
    	 	this.title = title;
    	 }
-   }
+    hasJob() {
+      return !!this.title;
+    }
+  }
 
 
-  let me = new Person('Michael');
+  let me = new Employee('Michael', 26, 'db admin');
    console.log(me.getGreeting());
-   let him = new Person('Andrew', 25);
+   
+   let him = new Employee('Andrew', 25);
    console.log(him.getGreeting());
    console.log(him.getPersonDescription());
+   console.log(him.hasJob());
+
 });
