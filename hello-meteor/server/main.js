@@ -33,6 +33,13 @@ Meteor.startup(() => {
     }
   }
 
+  class Programmer extends Person {
+  	constructor(name, age, preferredLanguage) {
+  		super(name, age);
+  		this.preferredLanguage = preferredLanguage;
+  	}
+  	
+  }
 
   let me = new Employee('Michael', 26, 'db admin');
    console.log(me.getGreeting());
