@@ -6,6 +6,8 @@ import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
+import Byline from './../imports/ui/Byline';
+
 
 const renderPlayers = (playersList) => {
   return playersList.map((player) => {
@@ -54,6 +56,7 @@ Meteor.startup(() => {
 	  let jsx = (
 		<div>
 		 <TitleBar/>
+		 <Byline/>
 		 <AddPlayer/>
 		 <p>Hello {name}!</p>
 	     {renderPlayers(players)}
