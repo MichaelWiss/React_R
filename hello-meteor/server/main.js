@@ -37,9 +37,7 @@ Meteor.startup(() => {
   let me = new Employee('Michael', 26, 'db admin');
    console.log(me.getGreeting());
    
-   let him = new Employee('Andrew', 25);
-   console.log(him.getGreeting());
-   console.log(him.getPersonDescription());
+  let him = new Employee('Andrew', 25);
    console.log(him.hasJob());
 
 });
