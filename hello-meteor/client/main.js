@@ -4,6 +4,7 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 
 import {Players} from './../imports/api/players';
+import TitleBar from './../imports/ui/TitleBar';
 
 
 const renderPlayers = (playersList) => {
@@ -43,15 +44,7 @@ const handleSubmit = (e) => {
 }; 
 
 
-class TitleBar extends React.Component {
-     render() {
-     	return (
-          <div>
-             <h1> My App Name</h1>
-          </div>
-     	);
-     }
-}
+
 
 Meteor.startup(() => {
    Tracker.autorun(() => {
@@ -60,7 +53,7 @@ Meteor.startup(() => {
 	  let name = 'Mike'
 	  let jsx = (
 		<div>
-		 <h1>{title}</h1>
+		 <TitleBar/>
 		 <p>Hello {name}!</p>
 	     {renderPlayers(players)}
 	     <form onSubmit={handleSubmit}>
