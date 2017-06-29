@@ -44,7 +44,7 @@ Meteor.startup(() => {
 		 
 		 <p>Hello {name}!</p>
 	     {renderPlayers(players)}
-	     <AddPlayer/>
+	     <AddPlayer score={10}/>
 	     </div>
 	 );
 	ReactDOM.render(jsx, document.getElementById('app'));
