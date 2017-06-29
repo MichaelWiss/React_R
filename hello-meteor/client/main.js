@@ -30,24 +30,6 @@ const renderPlayers = (playersList) => {
    });
  };
 
-const handleSubmit = (e) => {
-   let playerName = e.target.playerName.value;
-
-   e.preventDefault();
-
-   if (playerName) {
-   	 e.target.playerName.value = '';
-   	 Players.insert(
-    {
-    	name: playerName,
-    	score: 0
-    });
-  }
-}; 
-
-
-
-
 Meteor.startup(() => {
    Tracker.autorun(() => {
 	  let players = Players.find().fetch();
