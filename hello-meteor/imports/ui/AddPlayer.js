@@ -2,6 +2,11 @@ import React from 'react';
 import {Players} from './../api/players';
 
 const handleSubmit = (e) => {
+   
+}; 
+
+export default class AddPlayer extends React.Component {
+  handleSubmit(e){
    let playerName = e.target.playerName.value;
 
    e.preventDefault();
@@ -14,10 +19,6 @@ const handleSubmit = (e) => {
     	score: 0
     });
   }
-}; 
-
-export default class AddPlayer extends React.Component {
-	 handleSubmit(e){
 
 	 }
      render() {
