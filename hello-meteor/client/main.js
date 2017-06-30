@@ -7,16 +7,7 @@ import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
 import Byline from './../imports/ui/Byline';
-import Player from './../imports/ui/player';
-
-
-const renderPlayers = (playersList) => {
-  return playersList.map((player) => {
-     return <Player key={player._id} player={player}/>;
-     
- 
-  });
- };
+import PlayerList from './../imports/ui/PlayerList'; 
 
 Meteor.startup(() => {
    Tracker.autorun(() => {
@@ -29,16 +20,12 @@ Meteor.startup(() => {
 		 <TitleBar title={title}/>
 		 <TitleBar subtitle={subtitle}/>
 		 <Byline/>
-		 
-		 <p>Hello {name}!</p>
-	     {renderPlayers(players)}
+	     <PlayerList players={players}/>
 	     <AddPlayer/>
 	     </div>
 	 );
 	ReactDOM.render(jsx, document.getElementById('app'));
-  });
-  //insert new doc
-  
+  });  
 });
 
 
