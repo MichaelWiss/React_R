@@ -1,9 +1,9 @@
 import React from 'react';
-import {Players} from './../imports/api/players';
+import {Players} from './../api/players';
 
 
 
-export default class AddPlayer extends React.Component {
+export default class Player extends React.Component {
 	render() {
       return (
        <p key={this.props.player._id}>
