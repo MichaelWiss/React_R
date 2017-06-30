@@ -7,7 +7,7 @@ import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
 import Byline from './../imports/ui/Byline';
-import Player from './../imports/ui/Player';
+import Player from './../imports/ui/player';
 
 
 const renderPlayers = (playersList) => {
