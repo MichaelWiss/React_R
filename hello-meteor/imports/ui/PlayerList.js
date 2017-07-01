@@ -16,3 +16,7 @@ render()  {
       );
 	}
 };
+
+PlayerList.propTypes = {
+	players: React.PropTypes.array.isRequired
+}
