@@ -3,11 +3,15 @@ import Player from './player';
 
 export default class PlayerList extends React.Component {
 	renderPlayers() {
+      if (this.props.players.length ===0) {
+      	
+      }
+
     return this.props.players.map((player) => {
      return <Player key={player._id} player={player}/>;
     });
  }
- 
+
 render()  {
      return (
       	<div>
