@@ -13,12 +13,9 @@ Meteor.startup(() => {
    Tracker.autorun(() => {
 	  let players = Players.find().fetch();
 	  let title = 'Score Keep';
-	  let name = 'Mike';
-	  let subtitle = "Mike's App"
 	  let jsx = (
 		<div>
 		 <TitleBar title={title}/>
-		 <TitleBar subtitle={subtitle}/>
 		 <Byline/>
 	     <PlayerList players={players}/>
 	     <AddPlayer/>
