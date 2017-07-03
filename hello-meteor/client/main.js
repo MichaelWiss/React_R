@@ -11,7 +11,8 @@ Meteor.startup(() => {
    Tracker.autorun(() => {
 	  let players = Players.find({}, {
 	  	sort: {
-	  		name: -1
+	  		
+	  		score: -1
 	  	}
 	  }).fetch();
 	  let title = 'Score Keep';
