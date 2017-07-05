@@ -12,6 +12,10 @@
 	&:hover, &:focus {
       background: #e8e8e8;
 	}
+
+	&:active {
+		background:#dddddd;
+	}
 }
 
 .button--round {
