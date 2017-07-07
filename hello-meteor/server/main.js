@@ -17,5 +17,5 @@ let user = {
 };
 
 let person = {
-	age: 
-}
+	age: 45
+};
