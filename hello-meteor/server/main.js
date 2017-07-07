@@ -22,3 +22,19 @@ let person = {
 };
 
 console.log(person);
+
+let house = {
+	bedrooms: 2,
+	bathrooms: 1.5
+};
+
+let yearBuilt = 1995;
+
+let myHouse = {
+	...house,
+	bedrooms: 3,
+	yearBuilt: 1995,
+	flooring: 'Carpet'
+}
+
+console.log(myHouse);
