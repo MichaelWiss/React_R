@@ -15,8 +15,8 @@ export const calculatePlayerPositions = (players) => {
       return {
       	...player, 
       	rank,
-      	position: '1st'
-      }
+      	position: numeral(rank).format('0o')
+      };
    });
 };
 
