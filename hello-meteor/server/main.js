@@ -9,3 +9,13 @@ Meteor.startup(() => {
     }
   };
 });
+
+// object spread operator
+let user = {
+   name: 'Michael',
+   location: 'New York'
+};
+
+let person = {
+	age: 
+}
