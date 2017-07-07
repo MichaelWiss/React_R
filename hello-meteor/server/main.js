@@ -17,5 +17,8 @@ let user = {
 };
 
 let person = {
-	age: 45
+	...user,
+	age: 35
 };
+
+console.log(person);
